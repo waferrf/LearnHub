@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "learnhub-bonus",
+		"name": "LearnHub Collection (Bonus)",
+		"description": "Collection complète pour tester l'API de LearnHub (Projet Final)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/users/{{userId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Nouveau\",\n    \"lastName\": \"User\",\n    \"email\": \"test@learnhub.com\",\n    \"role\": \"student\",\n    \"password\": \"123456\"\n}"
+						},
+						"url": "http://localhost:3000/api/users"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Get All Courses (Filtered)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/courses?sort=-price&minPrice=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "-price"
+								},
+								{
+									"key": "minPrice",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Course (Regex)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/courses?q=python",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "python"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Actions & Bonus",
+			"item": [
+				{
+					"name": "Enroll User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"{{userId}}\",\n    \"courseId\": \"{{courseId}}\"\n}"
+						},
+						"url": "http://localhost:3000/api/enrollments"
+					},
+					"response": []
+				},
+				{
+					"name": "User Dashboard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/users/{{userId}}/dashboard"
+					},
+					"response": []
+				},
+				{
+					"name": "Global Stats (Bonus)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/stats"
+					},
+					"response": []
+				},
+				{
+					"name": "Export Data (Bonus)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/export"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "userId",
+			"value": "69a60aad0c6e691c3c7c2907"
+		},
+		{
+			"key": "courseId",
+			"value": "69a60aad0c6e691c3c7c291d"
+		}
+	]
+}
