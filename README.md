@@ -1,6 +1,6 @@
 #  LearnHub — Plateforme d'E-Learning (Backend API & MongoDB)
 
-!
+
 **LearnHub** est une solution backend complète pour une plateforme d'apprentissage en ligne.
 
 ---
