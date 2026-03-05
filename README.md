@@ -1,7 +1,7 @@
 #  LearnHub — Plateforme d'E-Learning (Backend API & MongoDB)
 
 !
-**LearnHub** est une solution backend complète pour une plateforme d'apprentissage en ligne. Ce projet démontre une architecture **RESTful** robuste, une modélisation de données **NoSQL** avancée et une logique métier transactionnelle pour connecter étudiants et formateurs.
+**LearnHub** est une solution backend complète pour une plateforme d'apprentissage en ligne.
 
 ---
 
@@ -47,7 +47,7 @@ Le projet repose sur 5 collections interconnectées :
 2.  **Courses**  : Contient les métadonnées des cours (titre, prix, tags).
 3.  **Lessons**  : Chapitres associés à un cours (Relation 1-N).
 4.  **Enrollments**  : **Table de liaison riche** (User <-> Course) avec statut, dates et progression.
-5.  **Reviews** ⭐: Avis et notes laissés par les étudiants inscrits.
+5.  **Reviews** : Avis et notes laissés par les étudiants inscrits.
 
 ---
 
@@ -81,7 +81,7 @@ node server.js
 
 ---
 
-## 🔌 Documentation API (Principaux Endpoints)
+##  Documentation API (Principaux Endpoints)
 
 | Méthode | Endpoint | Description |
 | :--- | :--- | :--- |
